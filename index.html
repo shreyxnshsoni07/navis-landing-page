@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navis | Find Any Message in Long AI Chats. Instantly</title>
+    <meta name="description" content="Stop endlessly scrolling through walls of text. Get a clickable minimap to jump exactly to the prompt you need.">
+    
+    <!-- Google Fonts: Inter as fallback, but favoring SF Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <div class="logo">
+                    <i data-lucide="compass" class="logo-icon"></i>
+                    <span class="logo-text">Navis</span>
+                </div>
+            </div>
+            
+            <div class="nav-center">
+                <a href="#features" class="nav-link">Store</a>
+                <a href="#privacy" class="nav-link">Pro</a>
+                <a href="#" class="nav-link">AI</a>
+                <a href="#" class="nav-link">Developers</a>
+                <a href="#" class="nav-link">Pricing</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="#" class="nav-link login-link">Log in</a>
+                <a href="#" class="btn btn-primary btn-sm btn-download">
+                    <i data-lucide="chrome"></i>
+                    Download
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero selection-dark">
+            
+            <!-- Diagonal Glow Background -->
+            <div class="hero-rays">
+                <div class="ray ray-1"></div>
+                <div class="ray ray-2"></div>
+                <div class="ray ray-3"></div>
+                <div class="ray ray-4"></div>
+            </div>
+
+            <div class="container hero-content text-center">
+
+                <!-- Headline & Sub (Rule 2 & 3: Clear Value Comm) -->
+                <h1 class="hero-title animate-fade-in-up" style="animation-delay: 0.2s">
+                    Find Any Message in <br>
+                    Long AI Chats.
+                </h1>
+                
+                <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.3s">
+                    Your AI chats are a messy endless wall of text. Get a clickable minimap that lets you jump perfectly to any previous prompt or answer.
+                </p>
+
+                <div class="hero-actions animate-fade-in-up" style="animation-delay: 0.4s">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i data-lucide="chrome"></i>
+                        Add to Chrome — It's Free
+                    </a>
+                    <p class="hero-subtext">No tracking. 100% Private local processing.</p>
+                <!-- Text above Mockup (Raycast Style) removed by user request -->
+
+        <!-- The Visual Extension Demo -->
+        <div class="hero-visual animate-fade-in-up" style="animation-delay: 0.6s">
+            <div style="position: relative; max-width: 900px; margin: 0 auto; z-index: 10;">
+                
+                <!-- Scribble Annotation -->
+                <div class="try-it-annotation">
+                    <span class="try-it-text">Try it yourself!</span>
+                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none" class="drawn-arrow">
+                        <path d="M70,15 C55,10 35,25 20,55" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M15,42 L20,55 L35,52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="mockup-window chatgpt-mockup">
+                <!-- ChatGPT Header Mock -->
+                <div class="chatgpt-header">
+                    <div class="chatgpt-header-left">
+                        <span class="chatgpt-model">ChatGPT <span class="text-muted">Auto</span> <i data-lucide="chevron-down" class="icon-sm"></i></span>
+                    </div>
+                    <div class="chatgpt-header-right">
+                        <span class="chatgpt-action"><i data-lucide="share" class="icon-sm"></i> Share</span>
+                    </div>
+                </div>
+
+                <!-- ChatGPT Body -->
+                <div class="chatgpt-body">
+                    <div class="chatgpt-messages">
+                        <!-- Message 1 -->
+                        <div class="message user-message" id="msg-0">
+                            <div class="message-bubble">Explain the concept of a Dyson Sphere simply.</div>
+                        </div>
+                        <div class="message ai-message" id="msg-1">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>A Dyson Sphere is a hypothetical megastructure that completely encompasses a star to capture a large percentage of its solar power output. It was first described by physicist Freeman Dyson in 1960 as a way for advanced civilizations to meet their growing energy needs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 -->
+                        <div class="message user-message" id="msg-2">
+                            <div class="message-bubble">Could we build one around our Sun?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-3">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>Building a full Dyson Sphere around our Sun is currently impossible. We don't have the materials or the technology. The sheer amount of matter required would mean dismantling several planets in our solar system just to get enough raw material.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 3 -->
+                        <div class="message user-message" id="msg-4">
+                            <div class="message-bubble">Well, what about a Dyson Swarm instead?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-5">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>A Dyson Swarm is much more feasible. Instead of a solid shell, it consists of millions of independent solar collectors orbiting the star in a dense formation. This approach doesn't require impossibly strong materials and can be built gradually over time.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 4 -->
+                        <div class="message user-message" id="msg-6">
+                            <div class="message-bubble">How would we even transmit the energy back to Earth?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-7">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>The most likely method would be wireless power transmission. The collectors could beam the gathered solar energy back to receiving stations on Earth or other colonies using high-frequency microwaves or concentrated lasers.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 5 -->
+                        <div class="message user-message" id="msg-8">
+                            <div class="message-bubble">What happens if a laser misses the receiver?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-9">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>Safety is a major engineering challenge. If a high-powered energy beam missed its target, it could potentially cause severe thermal damage to the surrounding environment or atmosphere. Advanced targeting and fail-safe cutoff systems would be absolutely critical.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 6 -->
+                        <div class="message user-message" id="msg-10">
+                            <div class="message-bubble">Are there any stars that look like they might have alien Dyson structures?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-11">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>The most famous example is Tabby's Star (KIC 8462852). It experienced sudden, massive dips in brightness—up to 22%—that couldn't easily be explained by planets. While some speculated it could be an alien megastructure, recent data suggests the dimming is more likely caused by clouds of uneven dust.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 7 -->
+                        <div class="message user-message" id="msg-12">
+                            <div class="message-bubble">That's slightly disappointing. What's the Kardashev scale?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-13">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>The Kardashev scale is a method of measuring a civilization's level of technological advancement based on the amount of energy it is able to use. It categorizes civilizations into three base types: Type I (planetary), Type II (stellar), and Type III (galactic).</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 8 -->
+                        <div class="message user-message" id="msg-14">
+                            <div class="message-bubble">Where does humanity rank on that scale right now?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-15">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>Humanity is currently a Type 0 civilization. We have not yet harnessed all the energy of our planet. According to astronomer Carl Sagan's extrapolation, we are roughly at a Type 0.73 civilization as of the early 21st century.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 9 -->
+                        <div class="message user-message" id="msg-16">
+                            <div class="message-bubble">How long until we reach Type I?</div>
+                        </div>
+                        <div class="message ai-message" id="msg-17">
+                            <div class="ai-avatar"><i data-lucide="sparkles" class="icon-sm text-black"></i></div>
+                            <div class="message-content">
+                                <p>Estimates vary widely, but physicist Michio Kaku suggests humanity could reach Type I status within the next 100 to 200 years, assuming our energy consumption continues to grow at its current rate and we avoid catastrophic societal collapse.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Real Extension UI -->
+                    <div id="navigator-root" style="position: absolute; right: 0; top: 0; bottom: 0; width: 60px;">
+                      <div id="sidebar-root" class="minimap-container">
+                        
+                        <!-- The Track (Holds the arrows and lines) -->
+                        <div class="minimap-track">
+                          <!-- Top Arrow (Scroll Up) -->
+                          <div class="minimap-arrow" style="opacity: 1; pointer-events: auto;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M18 15l-6-6-6 6"></path>
+                            </svg>
+                          </div>
+                          
+                          <!-- JS will render the lines here dynamically, but we add a few mock ones for initial load/no-js -->
+                          <div class="minimap-line user-line" data-index="0"><span class="minimap-line-number">1</span></div>
+                          <div class="minimap-line ai-line" data-index="1"><span class="minimap-line-number">2</span></div>
+                          <div class="minimap-line user-line" data-index="2"><span class="minimap-line-number">3</span></div>
+                          <div class="minimap-line ai-line" data-index="3"><span class="minimap-line-number">4</span></div>
+                          
+                          <!-- Bottom Arrow (Scroll Down) -->
+                          <div class="minimap-arrow" style="opacity: 1; pointer-events: auto;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The Hover Preview Box -->
+                        <div class="hover-preview" style="top: 50%; opacity: 0; pointer-events: none;">
+                          <div class="hover-preview-box">
+                            <div class="preview-header ai">
+                              <span class="preview-role">AI</span>
+                              <div class="preview-bookmark-btn" title="Bookmark prompt">
+                                 <!-- Bookmark SVG -->
+                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                              </div>
+                            </div>
+                            <div class="preview-body">This is the text of the message...</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+
+                <!-- Input area mock -->
+                <div class="chatgpt-input-area">
+                    <div class="chatgpt-input-box">
+                        <i data-lucide="plus" class="icon-md text-muted"></i>
+                        <span class="placeholder">Ask anything</span>
+                        <div class="input-actions">
+                            <i data-lucide="mic" class="icon-md text-muted mt-0"></i>
+                            <div class="send-btn"><i data-lucide="arrow-up" class="icon-md text-black"></i></div>
+                        </div>
+                    </div>
+                    <p class="chatgpt-disclaimer">ChatGPT can make mistakes. Check important info.</p>
+                </div>
+            </div>
+            </div> <!-- Closes relative wrapper -->
+
+            <!-- Text below Mockup (Raycast Style) -->
+            <div class="mockup-outro text-center animate-fade-in-up" style="animation-delay: 0.7s">
+                <p><span class="highlight">Never lose context.</span> Stop endlessly scrolling through massive chat logs -<br>with Navis you'll instantly jump to what matters.</p>
+            </div>
+        </div>
+                    
+                    <!-- decorative background glows -->
+                    <div class="glow-bg top-left"></div>
+                    <div class="glow-bg bottom-right"></div>
+
+            </div>
+        </section>
+
+        <!-- Problem / Agitate / Solve -->
+        <section class="problem-section" id="features">
+             <div class="container split-container">
+                 
+                 <!-- Left Column: Header Text -->
+                 <div class="split-header">
+                     <h2 class="section-title">The "Wall of Text" Problem</h2>
+                     <p class="section-subtitle">You asked 20 questions in a deep research session. Now you need to find question #4. Have fun scrolling through 5,000 words.</p>
+                     
+                     <!-- Feature Description Panel -->
+                     <div class="compass-desc-panel" id="compassPanel">
+                         <div class="compass-desc-icon" id="compassPanelIcon">
+                             <i data-lucide="mouse-pointer-click" id="compassPanelIconEl" style="width: 18px; height: 18px;"></i>
+                         </div>
+                         <h4 class="compass-desc-title" id="compassPanelTitle">Click to Jump</h4>
+                         <p class="compass-desc-text" id="compassPanelText">Don't scroll. Hover over the minimap track to preview your old message and click to instantly glide to it.</p>
+                     </div>
+                 </div>
+                 
+                 <!-- Right Column: Compass -->
+                 <div class="compass-wrapper">
+                     
+                     <!-- SVG Connection Lines -->
+                     <svg class="compass-svg" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <radialGradient id="lineGrad" cx="50%" cy="50%" r="50%">
+                                 <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
+                                 <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                             </radialGradient>
+                         </defs>
+                         <!-- Outer orbit ring -->
+                         <circle cx="280" cy="280" r="200" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                         <!-- Inner orbit ring -->
+                         <circle cx="280" cy="280" r="80" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                         <!-- Connection lines -->
+                         <line class="compass-line" id="line-0" x1="280" y1="280" x2="280" y2="80" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                         <line class="compass-line" id="line-1" x1="280" y1="280" x2="453" y2="180" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                         <line class="compass-line" id="line-2" x1="280" y1="280" x2="453" y2="380" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                         <line class="compass-line" id="line-3" x1="280" y1="280" x2="280" y2="480" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                         <line class="compass-line" id="line-4" x1="280" y1="280" x2="107" y2="380" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                         <line class="compass-line" id="line-5" x1="280" y1="280" x2="107" y2="180" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4"/>
+                     </svg>
+                     
+                     <!-- Compass Center -->
+                     <div class="compass-center">
+                         <div class="compass-center-ring"></div>
+                         <div class="compass-center-inner">
+                             <div class="compass-logo">
+                                 <i data-lucide="navigation" style="width: 22px; height: 22px; color: #fff;"></i>
+                             </div>
+                             <span class="compass-name">NAVIS</span>
+                             <span class="compass-sub">Navigator</span>
+                         </div>
+                     </div>
+                     
+                     <!-- Feature Node: North (top) -->
+                     <div class="compass-node" data-index="0" data-icon="mouse-pointer-click" data-title="Click to Jump" data-desc="Don't scroll. Hover over the minimap track to preview your old message and click to instantly glide to it." style="top: calc(50% - 200px); left: 50%; transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="mouse-pointer-click" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">Click to Jump</span>
+                     </div>
+                     
+                     <!-- Feature Node: NE (top right) -->
+                     <div class="compass-node" data-index="1" data-icon="eye" data-title="Hover Preview" data-desc="Hover on the minimap to preview messages before jumping. Navigate long chats without losing context." style="top: calc(50% - 100px); left: calc(50% + 173px); transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="eye" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">Hover Preview</span>
+                     </div>
+                     
+                     <!-- Feature Node: SE (bottom right) -->
+                     <div class="compass-node" data-index="2" data-icon="shield" data-title="100% Private" data-desc="Navis only reads the page structure to draw the timeline. It never reads or stores your text." style="top: calc(50% + 100px); left: calc(50% + 173px); transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="shield" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">100% Private</span>
+                     </div>
+                     
+                     <!-- Feature Node: South (bottom) -->
+                     <div class="compass-node" data-index="3" data-icon="zap" data-title="Invisible Until Needed" data-desc="Navis stays hidden in short chats. The timeline smoothly appears once the conversation becomes long enough to matter." style="top: calc(50% + 200px); left: 50%; transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="zap" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">Invisible Until Needed</span>
+                     </div>
+                     
+                     <!-- Feature Node: SW (bottom left) -->
+                     <div class="compass-node" data-index="4" data-icon="activity" data-title="Visual Timeline" data-desc="See the rhythm of the conversation. Small lines for your prompts, big lines for AI answers. Instantly locate information." style="top: calc(50% + 100px); left: calc(50% - 173px); transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="activity" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">Visual Timeline</span>
+                     </div>
+                     
+                     <!-- Feature Node: NW (top left) -->
+                     <div class="compass-node" data-index="5" data-icon="layout-list" data-title="Conversation Structure" data-desc="Understand the flow of your chat instantly. Navis visually separates prompts and AI responses." style="top: calc(50% - 100px); left: calc(50% - 173px); transform: translate(-50%, -50%);">
+                         <div class="compass-node-icon"><i data-lucide="layout-list" style="width: 14px; height: 14px;"></i></div>
+                         <span class="compass-node-label">Conversation Structure</span>
+                     </div>
+
+                 </div>
+             </div>
+        </section>
+
+        <!-- ----------------------------- -->
+        <!-- Supported AIs Section         -->
+        <!-- ----------------------------- -->
+        <section class="supported-ais-section" id="integrations">
+            <div class="container net-container">
+
+                <!-- Centered Header -->
+                <div class="net-header">
+                    <h2 class="section-title">Works wherever AI works.</h2>
+                    <p class="section-subtitle">Navis connects seamlessly to the biggest AI platforms — no setup required.</p>
+                    <p class="net-caption">No integrations &nbsp;·&nbsp; No configuration &nbsp;·&nbsp; Just navigation</p>
+                </div>
+
+                <!-- Network Graph Canvas: 800×440px, nodes absolutely placed -->
+                <div class="net-graph" id="netGraph">
+
+                    <!-- Faint orbit rings -->
+                    <div class="net-orbit-ring"></div>
+
+                    <!-- SVG: curved connection lines + flowing particles -->
+                    <svg class="net-svg" id="netSvg" viewBox="0 0 800 440" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="netGlowFilter" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- NAVIS card-bottom (400,135) → ChatGPT top-center (160,295) -->
+                        <path class="net-line" id="lineGPT"
+                              d="M 400 135 C 400 200, 220 265, 160 295"/>
+                        <!-- NAVIS card-bottom (400,135) → Gemini top-center (400,295) -->
+                        <path class="net-line" id="lineGemini"
+                              d="M 400 135 C 400 200, 400 250, 400 295"/>
+                        <!-- NAVIS card-bottom (400,135) → Claude top-center (640,295) -->
+                        <path class="net-line" id="lineClaude"
+                              d="M 400 135 C 400 200, 578 265, 640 295"/>
+
+                        <!-- Particles: NAVIS → ChatGPT -->
+                        <circle class="net-particle" r="3" fill="rgba(255,255,255,0.80)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s">
+                                <mpath href="#lineGPT"/>
+                            </animateMotion>
+                        </circle>
+                        <circle class="net-particle" r="1.8" fill="rgba(255,255,255,0.38)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0.85s">
+                                <mpath href="#lineGPT"/>
+                            </animateMotion>
+                        </circle>
+
+                        <!-- Particles: NAVIS → Gemini -->
+                        <circle class="net-particle" r="3" fill="rgba(255,255,255,0.80)">
+                            <animateMotion dur="1.75s" repeatCount="indefinite" begin="0.3s">
+                                <mpath href="#lineGemini"/>
+                            </animateMotion>
+                        </circle>
+                        <circle class="net-particle" r="1.8" fill="rgba(255,255,255,0.38)">
+                            <animateMotion dur="1.75s" repeatCount="indefinite" begin="1.1s">
+                                <mpath href="#lineGemini"/>
+                            </animateMotion>
+                        </circle>
+
+                        <!-- Particles: NAVIS → Claude -->
+                        <circle class="net-particle" r="3" fill="rgba(255,255,255,0.80)">
+                            <animateMotion dur="2.1s" repeatCount="indefinite" begin="0.65s">
+                                <mpath href="#lineClaude"/>
+                            </animateMotion>
+                        </circle>
+                        <circle class="net-particle" r="1.8" fill="rgba(255,255,255,0.38)">
+                            <animateMotion dur="2.1s" repeatCount="indefinite" begin="0.1s">
+                                <mpath href="#lineClaude"/>
+                            </animateMotion>
+                        </circle>
+                    </svg>
+
+                    <!-- NAVIS Card Node (top center) -->
+                    <div class="net-node net-node-navis" id="netHub">
+                        <div class="net-navis-glow"></div>
+                        <div class="net-node-logo-wrap" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); width: 38px; height: 38px; border-radius: 9px;">
+                            <i data-lucide="navigation" style="width: 20px; height: 20px; color: rgba(255,255,255,0.9);"></i>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                            <span class="net-node-name" style="font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; color: #fff;">NAVIS</span>
+                            <span style="font-size: 0.5rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; text-align: center; line-height: 1.2;">Universal<br>Navigator</span>
+                        </div>
+                    </div>
+
+                    <!-- ChatGPT (bottom left, SVG center 160,350) -->
+                    <div class="net-node net-node-chatgpt float-a" id="netGPT" data-line="lineGPT">
+                        <div class="net-node-logo-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.639" width="38" height="38" style="border-radius:9px;overflow:hidden;flex-shrink:0">
+                                <path fill="#fff" d="M115.612 0h280.775C459.974 0 512 52.026 512 115.612v278.415c0 63.587-52.026 115.613-115.613 115.613H115.612C52.026 509.64 0 457.614 0 394.027V115.612C0 52.026 52.026 0 115.612 0z"/>
+                                <path fill-rule="nonzero" d="M412.037 221.764a90.834 90.834 0 004.648-28.67 90.79 90.79 0 00-12.443-45.87c-16.37-28.496-46.738-46.089-79.605-46.089-6.466 0-12.943.683-19.264 2.04a90.765 90.765 0 00-67.881-30.515h-.576c-.059.002-.149.002-.216.002-39.807 0-75.108 25.686-87.346 63.554-25.626 5.239-47.748 21.31-60.682 44.03a91.873 91.873 0 00-12.407 46.077 91.833 91.833 0 0023.694 61.553 90.802 90.802 0 00-4.649 28.67 90.804 90.804 0 0012.442 45.87c16.369 28.504 46.74 46.087 79.61 46.087a91.81 91.81 0 0019.253-2.04 90.783 90.783 0 0067.887 30.516h.576l.234-.001c39.829 0 75.119-25.686 87.357-63.588 25.626-5.242 47.748-21.312 60.682-44.033a91.718 91.718 0 0012.383-46.035 91.83 91.83 0 00-23.693-61.553l-.004-.005z"/>
+                            </svg>
+                        </div>
+                        <span class="net-node-name">ChatGPT</span>
+                    </div>
+
+                    <!-- Google Gemini (bottom center, SVG center 400,350) -->
+                    <div class="net-node net-node-gemini float-b" id="netGemini" data-line="lineGemini">
+                        <div class="net-node-logo-wrap">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" width="38" height="38" style="flex-shrink:0">
+                                <mask id="gemmask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="65" height="65">
+                                    <path d="M32.447 0c.68 0 1.273.465 1.439 1.125a38.904 38.904 0 001.999 5.905c2.152 5 5.105 9.376 8.854 13.125 3.751 3.75 8.126 6.703 13.125 8.855a38.98 38.98 0 005.906 1.999c.66.166 1.124.758 1.124 1.438 0 .68-.464 1.273-1.125 1.439a38.902 38.902 0 00-5.905 1.999c-5 2.152-9.375 5.105-13.125 8.854-3.749 3.751-6.702 8.126-8.854 13.125a38.973 38.973 0 00-2 5.906 1.485 1.485 0 01-1.438 1.124c-.68 0-1.272-.464-1.438-1.125a38.913 38.913 0 00-2-5.905c-2.151-5-5.103-9.375-8.854-13.125-3.75-3.749-8.125-6.702-13.125-8.854a38.973 38.973 0 00-5.905-2A1.485 1.485 0 010 32.448c0-.68.465-1.272 1.125-1.438a38.903 38.903 0 005.905-2c5-2.151 9.376-5.104 13.125-8.854 3.75-3.749 6.703-8.125 8.855-13.125a38.972 38.972 0 001.999-5.905A1.485 1.485 0 0132.447 0z" fill="url(#gLP)"/>
+                                </mask>
+                                <g mask="url(#gemmask)">
+                                    <rect width="65" height="65" fill="url(#gLP2)"/>
+                                    <g filter="url(#gf5)"><path d="M67.391 42.993c10.132 0 18.346-7.91 18.346-17.666 0-9.757-8.214-17.667-18.346-17.667s-18.346 7.91-18.346 17.667c0 9.757 8.214 17.666 18.346 17.666z" fill="#3186FF"/></g>
+                                    <g filter="url(#gf7)"><path d="M34.74 51.43c11.135 7.656 25.896 5.524 32.968-4.764 7.073-10.287 3.779-24.832-7.357-32.488C49.215 6.52 34.455 8.654 27.382 18.94c-7.072 10.288-3.779 24.833 7.357 32.49z" fill="#3186FF"/></g>
+                                    <g filter="url(#gf2)"><path d="M27.433 21.649c10.3 0 18.651-8.535 18.651-19.062 0-10.528-8.35-19.062-18.651-19.062S8.78-7.94 8.78 2.587c0 10.527 8.35 19.062 18.652 19.062z" fill="#FC413D"/></g>
+                                    <g filter="url(#gf4)"><path d="M30.954 74.181c9.014-5.485 11.427-17.976 5.389-27.9-6.038-9.925-18.241-13.524-27.256-8.04-9.015 5.486-11.428 17.977-5.39 27.902 6.04 9.924 18.242 13.523 27.257 8.038z" fill="#00B95C"/></g>
+                                </g>
+                                <defs>
+                                    <linearGradient id="gLP" x1="18.447" y1="43.42" x2="52.153" y2="15.004" gradientUnits="userSpaceOnUse"><stop stop-color="#4893FC"/><stop offset=".27" stop-color="#4893FC"/><stop offset=".777" stop-color="#969DFF"/><stop offset="1" stop-color="#BD99FE"/></linearGradient>
+                                    <linearGradient id="gLP2" x1="0" y1="0" x2="65" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#1a1a2e"/><stop offset="1" stop-color="#16213e"/></linearGradient>
+                                    <filter id="gf2" x="-15" y="-40" width="85" height="86" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="12"/></filter>
+                                    <filter id="gf4" x="-20" y="15" width="80" height="82" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="10"/></filter>
+                                    <filter id="gf5" x="30" y="-12" width="76" height="74" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="10"/></filter>
+                                    <filter id="gf7" x="8" y="-6" width="79" height="78" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="8"/></filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="net-node-name">Google Gemini</span>
+                    </div>
+
+                    <!-- Claude (bottom right, SVG center 640,350) -->
+                    <div class="net-node net-node-claude float-c" id="netClaude" data-line="lineClaude">
+                        <div class="net-node-logo-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64" width="38" height="38" style="border-radius:9px;overflow:hidden;flex-shrink:0">
+                                <path fill="#D77655" d="M115.612 0h280.775C459.974 0 512 52.026 512 115.612v278.415c0 63.587-52.026 115.612-115.613 115.612H115.612C52.026 509.639 0 457.614 0 394.027V115.612C0 52.026 52.026 0 115.612 0z"/>
+                                <path fill="#FCF2EE" fill-rule="nonzero" d="M142.27 316.619l73.655-41.326 1.238-3.589-1.238-1.996-3.589-.001-12.31-.759-42.084-1.138-36.498-1.516-35.361-1.896-8.897-1.895-8.34-10.995.859-5.484 7.482-5.03 10.717.935 23.683 1.617 35.537 2.452 25.782 1.517 38.193 3.968h6.064l.86-2.451-2.073-1.517-1.618-1.517-36.776-24.922-39.81-26.338-20.852-15.166-11.273-7.683-5.687-7.204-2.451-15.721 10.237-11.273 13.75.935 3.513.936 13.928 10.716 29.749 23.027 38.848 28.612 5.687 4.727 2.275-1.617.278-1.138-2.553-4.271-21.13-38.193-22.546-38.848-10.035-16.101-2.654-9.655c-.935-3.968-1.617-7.304-1.617-11.374l11.652-15.823 6.445-2.073 15.545 2.073 6.547 5.687 9.655 22.092 15.646 34.78 24.265 47.291 7.103 14.028 3.791 12.992 1.416 3.968 2.449-.001v-2.275l1.997-26.641 3.69-32.707 3.589-42.084 1.239-11.854 5.863-14.206 11.652-7.683 9.099 4.348 7.482 10.716-1.036 6.926-4.449 28.915-8.72 45.294-5.687 30.331h3.313l3.792-3.791 15.342-20.372 25.782-32.227 11.374-12.789 13.27-14.129 8.517-6.724 16.1-.001 11.854 17.617-5.307 18.199-16.581 21.029-13.75 17.819-19.716 26.54-12.309 21.231 1.138 1.694 2.932-.278 44.536-9.479 24.062-4.347 28.714-4.928 12.992 6.066 1.416 6.167-5.106 12.613-30.71 7.583-36.018 7.204-53.636 12.689-.657.48.758.935 24.164 2.275 10.337.556h25.301l47.114 3.514 12.309 8.139 7.381 9.959-1.238 7.583-18.957 9.655-25.579-6.066-59.702-14.205-20.474-5.106-2.83-.001v1.694l17.061 16.682 31.266 28.233 39.152 36.397 1.997 8.999-5.03 7.102-5.307-.758-34.401-25.883-13.27-11.651-30.053-25.302-1.996-.001v2.654l6.926 10.136 36.574 54.975 1.895 16.859-2.653 5.485-9.479 3.311-10.414-1.895-21.408-30.054-22.092-33.844-17.819-30.331-2.173 1.238-10.515 113.261-4.929 5.788-11.374 4.348-9.478-7.204-5.03-11.652 5.03-23.027 6.066-30.052 4.928-23.886 4.449-29.674 2.654-9.858-.177-.657-2.173.278-22.37 30.71-34.021 45.977-26.919 28.815-6.445 2.553-11.173-5.789 1.037-10.337 6.243-9.2 37.257-47.392 22.47-29.371 14.508-16.961-.101-2.451h-.859l-98.954 64.251-17.618 2.275-7.583-7.103.936-11.652 3.589-3.791 29.749-20.474-.101.102.024.101z"/>
+                            </svg>
+                        </div>
+                        <span class="net-node-name">Claude</span>
+                    </div>
+
+                </div><!-- /net-graph -->
+
+            </div>
+        </section>
+
+
+        <!-- Final Action (CTA) -->
+        <section class="final-cta text-center">
+            <div class="container">
+                <h2 class="cta-title">Navigate Faster Today.</h2>
+                <a href="#" class="btn-cta-final mt-8">
+                    <i data-lucide="chrome"></i>
+                    Add to Chrome — It's Free
+                </a>
+            </div>
+        </section>
+
+        <div class="footer-divider"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-minimal">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="logo">
+                     <i data-lucide="compass" class="logo-icon text-muted"></i>
+                     <span class="logo-text text-muted">Navis</span>
+                </div>
+                <p class="footer-copyright">© 2026 Navis Extension. Not affiliated with OpenAI.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="footer-link">Twitter</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="https://buymeacoffee.com/shreyanshsoni" class="footer-link" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
