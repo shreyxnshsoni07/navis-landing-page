@@ -1797,4 +1797,447 @@ h1, h2, h3 {
 }
 
 
+/* === RESPONSIVE OVERRIDES === */
 
+/* -------------------------------------------------------
+   12. GLOBAL — all mobile
+   ------------------------------------------------------- */
+@media (max-width: 900px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* -------------------------------------------------------
+   3. HERO MOCKUP (below 900px)
+   ------------------------------------------------------- */
+@media (max-width: 900px) {
+    .hero-visual {
+        padding: 0 16px;
+        overflow: hidden;
+        margin-top: 80px;
+    }
+    .chatgpt-mockup {
+        width: 100%;
+        border-radius: 12px;
+    }
+    .chatgpt-body {
+        height: 320px;
+    }
+    .try-it-annotation {
+        display: none !important;
+    }
+    .chatgpt-messages {
+        padding: 12px 8% 100px 8%;
+        gap: 20px;
+    }
+    .user-message .message-bubble {
+        max-width: 90%;
+        font-size: 13px;
+    }
+    .message-content {
+        font-size: 13px;
+    }
+}
+
+/* -------------------------------------------------------
+   1. NAVBAR + 2. HERO + 4. MINIMAP + 5. COMPASS +
+   7. NETWORK + 8. INPUT + 9. OUTRO + 10. CTA
+   (below 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ---- 12. GLOBAL MOBILE ---- */
+    .problem-section,
+    .supported-ais-section,
+    .final-cta {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .section-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    .section-subtitle {
+        font-size: clamp(14px, 4vw, 16px);
+        padding: 0 16px;
+    }
+
+    /* ---- 1. NAVBAR ---- */
+    .navbar {
+        height: 56px;
+        border-radius: 14px;
+        width: calc(100% - 24px);
+        top: 10px;
+    }
+    .nav-center {
+        display: none !important;
+    }
+    .nav-right .login-link {
+        display: none;
+    }
+    .nav-content {
+        padding: 0 12px;
+    }
+
+    /* ---- 2. HERO TITLE ---- */
+    .hero {
+        padding-top: calc(var(--nav-height) + 40px);
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+    .hero-title {
+        font-size: clamp(32px, 8vw, 52px) !important;
+        line-height: 1.08;
+        margin-bottom: 16px;
+    }
+    .hero-subtitle {
+        font-size: clamp(15px, 4vw, 18px) !important;
+        padding: 0 16px;
+        margin-bottom: 24px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .hero-visual {
+        margin-top: 40px;
+    }
+
+    /* ---- 4. MINIMAP ---- */
+    #navigator-root {
+        width: 44px !important;
+    }
+    .minimap-container {
+        width: 44px;
+    }
+    .minimap-line-number {
+        display: none;
+    }
+    .hover-preview {
+        display: none !important;
+    }
+    .minimap-line {
+        margin-right: 12px;
+    }
+    .minimap-arrow {
+        padding-right: 12px;
+    }
+
+    /* ---- 5. PROBLEM SECTION / COMPASS ---- */
+    .split-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .split-header {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    .compass-desc-panel {
+        margin: 24px auto 0;
+        max-width: 340px;
+    }
+    .compass-wrapper {
+        width: 100%;
+        max-width: 360px;
+        height: 360px;
+        min-width: unset;
+        min-height: unset;
+        margin: 0 auto;
+    }
+
+    /* Scale compass nodes: orbit 200→130, diagonal 173→112 */
+    .compass-node[data-index="0"] {
+        top: calc(50% - 130px) !important;
+        left: 50% !important;
+    }
+    .compass-node[data-index="1"] {
+        top: calc(50% - 65px) !important;
+        left: calc(50% + 112px) !important;
+    }
+    .compass-node[data-index="2"] {
+        top: calc(50% + 65px) !important;
+        left: calc(50% + 112px) !important;
+    }
+    .compass-node[data-index="3"] {
+        top: calc(50% + 130px) !important;
+        left: 50% !important;
+    }
+    .compass-node[data-index="4"] {
+        top: calc(50% + 65px) !important;
+        left: calc(50% - 112px) !important;
+    }
+    .compass-node[data-index="5"] {
+        top: calc(50% - 65px) !important;
+        left: calc(50% - 112px) !important;
+    }
+
+    .compass-center {
+        width: 100px;
+        height: 100px;
+    }
+    .compass-name {
+        font-size: 0.6rem;
+    }
+    .compass-sub {
+        font-size: 0.5rem;
+    }
+    .compass-logo i {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* ---- 7. NETWORK GRAPH ---- */
+    .net-graph {
+        width: 100%;
+        max-width: 480px;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        position: relative;
+    }
+    .net-svg {
+        display: none;
+    }
+    .net-orbit-ring {
+        display: none;
+    }
+
+    .net-node,
+    .net-node-navis,
+    .net-node-chatgpt,
+    .net-node-gemini,
+    .net-node-claude {
+        position: static !important;
+        transform: none !important;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        width: 220px;
+        justify-content: flex-start;
+        align-items: center;
+        animation: netNodeIn 0.6s ease both !important;
+        padding: 14px 18px;
+    }
+    .net-node-navis {
+        order: -1;
+    }
+    .net-navis-glow {
+        display: none;
+    }
+
+    /* Vertical connector */
+    .net-graph::before {
+        content: "";
+        position: absolute;
+        top: 80px;
+        bottom: 80px;
+        left: 50%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.08);
+        z-index: 0;
+        transform: translateX(-50%);
+    }
+
+    .net-header {
+        margin-bottom: 40px;
+    }
+    .net-header .section-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    .supported-ais-section {
+        padding: 60px 0 80px;
+    }
+
+    /* ---- 8. CHATGPT INPUT AREA ---- */
+    .chatgpt-input-area {
+        padding: 10px 12px !important;
+        width: calc(100% - 44px) !important;
+    }
+    .chatgpt-input-box {
+        font-size: 13px;
+        padding: 10px 12px;
+        border-radius: 20px;
+    }
+    .chatgpt-disclaimer {
+        font-size: 10px;
+    }
+
+    /* ---- 9. MOCKUP OUTRO ---- */
+    .mockup-outro p {
+        font-size: 14px;
+        padding: 0 20px;
+        line-height: 1.6;
+    }
+    .mockup-outro br {
+        display: none;
+    }
+    .mockup-outro {
+        margin-top: 40px;
+    }
+
+    /* ---- 10. FINAL CTA ---- */
+    .final-cta {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .cta-title {
+        font-size: clamp(28px, 7vw, 40px);
+        margin-bottom: 24px;
+    }
+    .btn-cta-final {
+        width: 90%;
+        max-width: 340px;
+        font-size: 15px;
+        padding: 14px 20px;
+        justify-content: center;
+    }
+}
+
+/* -------------------------------------------------------
+   11. FOOTER (below 640px)
+   ------------------------------------------------------- */
+@media (max-width: 640px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+    .footer-left {
+        align-items: center;
+    }
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* -------------------------------------------------------
+   6. COMPASS NODES + extras (below 480px)
+   ------------------------------------------------------- */
+@media (max-width: 480px) {
+
+    /* Compass nodes shrink */
+    .compass-node-label {
+        display: none;
+    }
+    .compass-node {
+        gap: 4px;
+    }
+    .compass-node-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+    }
+    .compass-node-icon i {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    /* Further scale down compass orbit for small screens */
+    .compass-wrapper {
+        max-width: 300px;
+        height: 300px;
+    }
+    .compass-node[data-index="0"] {
+        top: calc(50% - 110px) !important;
+    }
+    .compass-node[data-index="1"] {
+        top: calc(50% - 55px) !important;
+        left: calc(50% + 95px) !important;
+    }
+    .compass-node[data-index="2"] {
+        top: calc(50% + 55px) !important;
+        left: calc(50% + 95px) !important;
+    }
+    .compass-node[data-index="3"] {
+        top: calc(50% + 110px) !important;
+    }
+    .compass-node[data-index="4"] {
+        top: calc(50% + 55px) !important;
+        left: calc(50% - 95px) !important;
+    }
+    .compass-node[data-index="5"] {
+        top: calc(50% - 55px) !important;
+        left: calc(50% - 95px) !important;
+    }
+
+    .compass-center {
+        width: 80px;
+        height: 80px;
+    }
+    .compass-name {
+        font-size: 0.55rem;
+    }
+    .compass-sub {
+        font-size: 0.45rem;
+    }
+    .compass-logo i {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* Hero adjustments */
+    .hero-title {
+        font-size: clamp(28px, 9vw, 40px) !important;
+    }
+    .hero-subtitle {
+        font-size: 14px !important;
+    }
+    .btn-lg {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Mockup tighter */
+    .chatgpt-body {
+        height: 260px;
+    }
+    .chatgpt-messages {
+        padding: 10px 5% 90px 5%;
+        gap: 16px;
+    }
+    .user-message .message-bubble {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .message-content {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .ai-avatar {
+        width: 22px;
+        height: 22px;
+    }
+    .message {
+        gap: 8px;
+    }
+
+    /* Network mobile cards narrower */
+    .net-node,
+    .net-node-navis,
+    .net-node-chatgpt,
+    .net-node-gemini,
+    .net-node-claude {
+        width: 190px;
+        padding: 12px 14px;
+    }
+    .net-node-logo-wrap svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .net-node-name {
+        font-size: 0.75rem;
+    }
+}
